@@ -7,14 +7,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Install Apptainer
+      - name: Install Singularity
         run: |
           sudo apt-get update
-          sudo apt-get install -y apptainer
+          sudo apt-get install -y singularity-container
 
       - name: Pull scrinvex
         run: |
-          apptainer pull scrinvex.sif docker://gcr.io/broad-cga-aarong-gtex/scrinvex
+          singularity pull scrinvex.sif docker://gcr.io/broad-cga-aarong-gtex/scrinvex
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
