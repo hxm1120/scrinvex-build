@@ -14,7 +14,7 @@ jobs:
 
       - name: Pull scrinvex
         run: |
-          singularity pull scrinvex.sif docker://gcr.io/broad-cga-aarong-gtex/scrinvex
+          singularity pull scrinvex.sif docker://us-docker.pkg.dev/broad-cga-aarong-gtex/scrinvex
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
